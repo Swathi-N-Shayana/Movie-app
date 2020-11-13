@@ -1,20 +1,22 @@
+@import 'src/app/mixins/mixins.scss';
+
 * {
-    background: rgb(14, 13, 13);
+    background: $background;
 }
 
 .movie-list {
     margin: 0;
-    color: white;
+    color: $text-color;
 
     .movie {
         margin: 50px;
         display: inline-flex;
-        
+
 
         .link {
             cursor: pointer;
             position: relative;
-            
+
 
             img {
                 margin-top: 10px;
@@ -31,7 +33,7 @@
                 margin: 0;
             }
 
-            
+
             .name {
                 font-weight: bold;
             }

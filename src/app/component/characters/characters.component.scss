@@ -1,0 +1,63 @@
+@import 'src/app/mixins/mixins.scss';
+
+.main {
+    background: $background;
+
+    h2,
+    h5 {
+        color: white;
+        text-align: center;
+    }
+
+
+    .container {
+        margin: 90px 0 0 175px;
+
+        .image {
+            margin: 30px;
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            height: 320px;
+            width: 180px;
+            background: $wrapper-background;
+            border-radius: 5px;
+
+            img {
+                height: 180px;
+                width: 180px;
+                transition: 0.3s all;
+            }
+
+            .character-name {
+                position: relative;
+                z-index: 4;
+                margin: 10px 10px;
+                color: white;
+                font-weight: bold;
+            }
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: red;
+                top: 180px;
+                left: 0;
+                transition: 0.3s all;
+            }
+
+            &:hover {
+                &::after {
+                    height: 100%;
+                }
+
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
