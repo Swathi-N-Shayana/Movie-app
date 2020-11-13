@@ -1,36 +1,21 @@
+@import 'src/app/mixins/mixins.scss';
+
+* {
+    background: $background;
+}
+
 .movie-list {
+    margin: 0;
+    color: $text-color;
+    padding-left: 50px;
+   
     .movie {
-        border: 1px solid black;
-        margin:12px;
-        width: 145px;
-        padding: 2px;
-        border-radius: 5px;
+        margin: 50px;
         display: inline-flex;
-        height: 289px;
         .link {
-            cursor: pointer;
             position: relative;
-            img {
-                width: 140px;
-                height: 200px;
-            }
-            p {
-                margin: 0;
-            }
-
-            .name {
-                font-weight: bold;
-            }
-
-            .year {
-                font-size: 14px;
-            }
-
-            button {
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
+            @include image-style;
+            @include text;
         }
     }
 }

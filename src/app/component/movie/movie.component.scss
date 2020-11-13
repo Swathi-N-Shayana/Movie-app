@@ -7,42 +7,17 @@
 .movie-list {
     margin: 0;
     color: $text-color;
-
+    padding-left: 50px;
+   
     .movie {
         margin: 50px;
         display: inline-flex;
 
-
         .link {
             cursor: pointer;
             position: relative;
-
-
-            img {
-                margin-top: 10px;
-                width: 150px;
-                height: 200px;
-            }
-
-            img:hover {
-                margin-top: 0px;
-                transition: 0.3s all;
-            }
-
-            p {
-                margin: 0;
-            }
-
-
-            .name {
-                font-weight: bold;
-            }
-
-
-            .year {
-                font-size: 14px;
-            }
-
+            @include image-style;
+            @include text;
 
             button {
                 position: absolute;
